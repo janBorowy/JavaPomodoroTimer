@@ -67,6 +67,8 @@ public class AppIO {
 
         } catch(LineUnavailableException e){
 
+        } catch(IllegalArgumentException e){
+
         }
 
         return null;
