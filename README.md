@@ -1,4 +1,4 @@
 # JavaPomodoroTimer
 Simple pomodoro timer in Java.
 
-In production: open through java src.Main in out/production/PomodoroTimer
+In production. Open through out/artifacts/PomodoroTimer_jar/PomodoroTimer.jar
