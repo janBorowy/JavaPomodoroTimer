@@ -65,12 +65,8 @@ public class AppIO {
 
         } catch(UnsupportedAudioFileException e){
 
-        } catch(LineUnavailableException e){
-
-        } catch(IllegalArgumentException e){
-
+        } catch(LineUnavailableException e) {
         }
-
         return null;
     }
 
