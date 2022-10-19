@@ -17,7 +17,7 @@ public class PomodoroTimer implements ActionListener {
     private final int workPhases;
     private final SoundManager soundManager;
 
-    private enum STATE_TYPE{
+    public enum STATE_TYPE{
         WORK,
         SHORT_BREAK,
         LONG_BREAK;
@@ -98,15 +98,18 @@ public class PomodoroTimer implements ActionListener {
                 ++workPhasesElapsed;
                 if(workPhasesElapsed % workPhases == 0) {
                     setState(STATE_TYPE.LONG_BREAK);
+                    TrayNotification.displayNotification(STATE_TYPE.LONG_BREAK);
                     soundManager.playSound("long_break_sound");
                 }
                 else {
                     setState(STATE_TYPE.SHORT_BREAK);
+                    TrayNotification.displayNotification(STATE_TYPE.SHORT_BREAK);
                     soundManager.playSound("break_sound");
                 }
                 break;
             default:
                 setState(STATE_TYPE.WORK);
+                TrayNotification.displayNotification(STATE_TYPE.WORK);
                 soundManager.playSound("work_bell_sound");
         }
     }
